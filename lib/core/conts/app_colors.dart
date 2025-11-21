@@ -4,7 +4,8 @@ class AppColors{
   static const Color appPrimary = Color(0xff060c12);
   static const Color red = Colors.red;
   static const Color white = Colors.white;
-  static const Color neonBlue = Colors.grey;
+  static const Color grey = Colors.grey;
+  static const Color black = Colors.black;
 
 
   static const LinearGradient appGradient = LinearGradient(

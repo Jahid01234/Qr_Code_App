@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:qr_code_app/core/bindings/controller_binder.dart';
 import 'package:qr_code_app/core/conts/app_colors.dart';
 import 'package:qr_code_app/core/conts/app_size.dart';
+import 'package:qr_code_app/core/routes/routes.dart';
 import 'package:qr_code_app/features/home/view/home_screen.dart';
 
 class QrCodeApp extends StatelessWidget {
@@ -15,12 +16,11 @@ class QrCodeApp extends StatelessWidget {
       title: 'QR Code Pro',
       debugShowCheckedModeBanner: false,
       initialBinding: ControllerBinder(),
-      //initialRoute: AppRoutes.splash,
-      //getPages: AppRoutes.routes,
+      initialRoute: AppRoutes.home,
+      getPages: AppRoutes.routes,
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.appPrimary,
       ),
-      home: HomeScreen(),
     );
   }
 }

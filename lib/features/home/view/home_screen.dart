@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:qr_code_app/core/conts/app_colors.dart';
 import 'package:qr_code_app/core/conts/app_size.dart';
 import 'package:qr_code_app/core/conts/app_texts.dart';
+import 'package:qr_code_app/core/routes/routes.dart';
 import 'package:qr_code_app/core/style/global_text_style.dart';
 import 'package:qr_code_app/features/home/view/widgets/qr_feature_button.dart';
+import 'package:qr_code_app/features/qr_generate/view/qr_code_generate_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -31,12 +34,16 @@ class HomeScreen extends StatelessWidget {
             QrFeatureButton(
               iconData: Icons.qr_code,
                 text:  AppTexts.generateQrCode,
-              onTap: (){},
+              onTap: (){
+                Get.toNamed(AppRoutes.qrCodeGenerate);
+              },
             ),
             QrFeatureButton(
               iconData: Icons.qr_code_scanner,
               text:  AppTexts.scanQrCode,
-              onTap: (){},
+              onTap: (){
+                Get.toNamed(AppRoutes.qrCodeScanner);
+              },
             ),
           ],
         ),

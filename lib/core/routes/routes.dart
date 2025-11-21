@@ -1,10 +1,16 @@
 import 'package:get/get.dart';
 import 'package:qr_code_app/features/home/view/home_screen.dart';
+import 'package:qr_code_app/features/qr_generate/view/qr_code_generate_screen.dart';
+import 'package:qr_code_app/features/qr_scan/view/qr_code_scanner_screen.dart';
 
 class AppRoutes{
   // Get routes name here.................
   static const String splash = '/splash';
   static const String home = '/home';
+  static const String qrCodeGenerate = '/qrCodeGenerate';
+  static const String qrCodeScanner = '/qrCodeScanner';
+
+
 
 
 
@@ -22,6 +28,16 @@ class AppRoutes{
       page: () => HomeScreen(),
       transition: Transition.leftToRight,
       ),
+    GetPage(
+      name: qrCodeGenerate,
+      page: () => QrCodeGenerateScreen(),
+      transition: Transition.leftToRight,
+    ),
+    GetPage(
+      name: qrCodeScanner,
+      page: () => QrCodeScannerScreen(),
+      transition: Transition.leftToRight,
+    ),
   ];
 
 
