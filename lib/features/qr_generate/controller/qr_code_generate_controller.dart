@@ -18,25 +18,50 @@ class QrCodeGenerateController extends GetxController{
     "url": TextEditingController(),
   };
 
-  String generateQRData (){
-    switch (selectedTye.value){
-      case 'contact':
-        return '''BEGIN:VCARD
-        VERSION: 3.0
-        FN: ${controller['name']?.text}
-        TEL: ${controller['phone']?.text}
-        EMAIL: ${controller['email']?.text}
-        END:VCARD''';
 
+  String generateQRData() {
+    switch (selectedTye.value) {
+
+    // CONTACT QR -----------------------
+      case 'contact':
+        String name = controller['name']!.text.trim();
+        String phone = controller['phone']!.text.trim();
+        String email = controller['email']!.text.trim();
+
+        // Prevent empty QR
+        if (name.isEmpty && phone.isEmpty && email.isEmpty) {
+          return "";
+        }
+
+        return '''
+            BEGIN:VCARD
+            VERSION:3.0
+            FN:$name
+            TEL:$phone
+            EMAIL:$email
+            END:VCARD
+            ''';
+
+    // URL QR ----------------------------
       case 'url':
-        String url = controller['url']?.text ?? "";
-        if(!url.startsWith('http://') && !url.startsWith('https://')){
-          url = 'https://$url';
+        String url = controller['url']!.text.trim();
+
+        // Prevent empty QR
+        if (url.isEmpty) return "";
+
+        if (!url.startsWith("http://") && !url.startsWith("https://")) {
+          url = "https://$url";
         }
         return url;
 
-      default :
-        return textEditingController.text;
+    // TEXT QR ---------------------------
+      default:
+        String text = textEditingController.text.trim();
+
+        // Prevent empty QR
+        if (text.isEmpty) return "";
+
+        return text;
     }
   }
 

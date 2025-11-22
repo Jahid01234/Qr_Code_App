@@ -19,7 +19,6 @@ class AppTexts {
   static const String codePro =  "Code Pro";
   static const String skip =  "Skip";
   static const String getStarted = "Let's Get Started";
-
   static const String onboardingTitle1 =  "Scan QR Code & Barcode";
   static const String onboardingSubtitle1 =  "Scan QR codes, barcodes, and business cards easily and quickly.";
   static const String onboardingTitle2 =  "Create QR Code";
