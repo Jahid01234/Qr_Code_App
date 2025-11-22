@@ -6,6 +6,8 @@ class AppColors{
   static const Color white = Colors.white;
   static const Color grey = Colors.grey;
   static const Color black = Colors.black;
+  static const Color orangeAccent = Colors.orangeAccent;
+  static const Color shadow = Color(0xff183E5D);
 
 
   static const LinearGradient appGradient = LinearGradient(

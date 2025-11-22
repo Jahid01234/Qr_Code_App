@@ -6,7 +6,7 @@ import 'package:qr_code_app/core/conts/app_texts.dart';
 import 'package:qr_code_app/core/routes/routes.dart';
 import 'package:qr_code_app/core/style/global_text_style.dart';
 import 'package:qr_code_app/features/home/view/widgets/qr_feature_button.dart';
-import 'package:qr_code_app/features/qr_generate/view/qr_code_generate_screen.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

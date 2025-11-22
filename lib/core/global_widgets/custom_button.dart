@@ -23,22 +23,26 @@ class CustomButton extends StatelessWidget {
         padding:
         EdgeInsets.symmetric(vertical: 14, horizontal: 20),
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.1),
+          color: Colors.white.withValues(alpha: 0.1),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Colors.white70),
+          border: Border.all(color: Colors.white38),
         ),
-        child: Row(
-          children: [
-            Icon(icon, color: Colors.white),
-            SizedBox(width: 10),
-            Text(
-              title,
-              style: globalTextStyle(
-                color: Colors.white,
-                fontSize: 16,
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(icon, color: Colors.white),
+              SizedBox(width: 10),
+              Text(
+                title,
+                style: globalTextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
