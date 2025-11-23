@@ -9,7 +9,8 @@ import 'package:qr_code_app/features/splash/controller/splash_controller.dart';
 class SplashScreen extends StatelessWidget {
    SplashScreen({super.key});
 
-  final SplashController controllers = Get.find<SplashController>();
+   final SplashController controller = Get.find<SplashController>();
+
 
   @override
   Widget build(BuildContext context) {

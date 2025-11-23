@@ -69,13 +69,31 @@ class QrCodeScannerScreen extends StatelessWidget {
                       },
                     )
                   : Center(
-                      child: Text(
-                        AppTexts.cameraPermission,
-                        style: globalTextStyle(
-                          color: AppColors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                        ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            AppTexts.cameraPermission,
+                            style: globalTextStyle(
+                              color: AppColors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          SizedBox(height: 20),
+
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 80),
+                            child: CustomButton(
+                              title: AppTexts.givePermission,
+                              icon: Icons.backup,
+                              onTap: () async {
+                                await controller.checkPermission();
+                              },
+                            ),
+                          )
+                        ],
                       ),
                     ),
             ),

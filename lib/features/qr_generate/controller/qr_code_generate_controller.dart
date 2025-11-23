@@ -78,5 +78,9 @@ class QrCodeGenerateController extends GetxController{
     await Share.shareXFiles([XFile(imagePath)],text: "Share QR Code");
   }
 
-
+  @override
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
+  }
 }

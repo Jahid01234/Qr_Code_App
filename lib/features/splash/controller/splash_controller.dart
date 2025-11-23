@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:qr_code_app/core/routes/routes.dart';
 
+
 class SplashController extends GetxController{
   @override
   void onInit() {
@@ -10,8 +11,8 @@ class SplashController extends GetxController{
 
 
   Future<void> redirectToNextScreen()async{
-    await Future.delayed( const Duration(seconds: 2));
-    Get.offNamed(AppRoutes.onboarding);
+    await Future.delayed( const Duration(seconds: 5));
+    Get.toNamed(AppRoutes.onboarding);
   }
 }
 

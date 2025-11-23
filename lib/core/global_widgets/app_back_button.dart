@@ -21,6 +21,7 @@ class AppBackButton extends StatelessWidget {
           child: Icon(
               Icons.arrow_back,
               color: AppColors.white,
+              size: 26,
           ),
         ),
         SizedBox(width: getWidth(30)),
